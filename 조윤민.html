@@ -13,6 +13,11 @@
   gtag('config', 'G-LKJ55CFN00');
 </script>
 <style>
+    #asdf {
+        border :5px none;
+        display: grid;
+        grid-template-columns: 160px 1fr;
+    }
       a {
         color:magenta;
     text-decoration: none;
@@ -33,21 +38,37 @@
     body {
         margin : 0;
     }
+    @media(max-width:800px){
+        #asdf{
+            display: block;
+        }
+        ol {
+            border-right : none;
+        }
+        .qwerty {
+            border-top :5px solid rgb(222, 113, 222);
+            padding: 0px;
+        }
+    }
     
 </style>
 </head>
 
 <body>
     <h1><a href="첫 페이지.html">나의 취미생활</a></h1>
+    <div id="asdf">
     <ol>
         <li><a href=폰게임.html>폰게임</a></li>
         <li><a href=베이핑.html>베이핑</a></li>
         <li><a href=조윤민.html style="text-decoration:underline;">조윤민</a>/<a href="https://www.instagram.com/xyuxmxny/" target="_blank" title="인스타주소">인스타</a></li>
     </ol>
+    <div class="qwerty"  style="padding-left : 20px;">
     <h2>조윤민에 대해서</h2>
     조윤민은 <strong>개뚱뚱한 <u>돼지</u>다</strong>
     <br>조만간 60키로가 될 예정이다
     <br><img src="돼지.jpg" width="30%">
     <p>하지만 오늘도 야식을 먹었다</p>
+</div>
+</div>
 </body>
 </html>

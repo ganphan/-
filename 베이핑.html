@@ -13,6 +13,11 @@
   gtag('config', 'G-LKJ55CFN00');
 </script>
 <style>
+    #asdf {
+        border :5px none;
+        display: grid;
+        grid-template-columns: 160px 1fr;
+    }
       a {
         color:magenta;
     text-decoration: none;
@@ -33,21 +38,37 @@
     body {
         margin : 0;
     }
+    @media(max-width:800px){
+        #asdf{
+            display: block;
+        }
+        ol {
+            border-right : none;
+        }
+        .qwerty {
+            border-top :5px solid rgb(222, 113, 222);
+            padding: 0px;
+        }
+    }
     
 </style>
 </head>
 
 <body>
     <h1><a href="첫 페이지.html">나의 취미생활</a></h1>
+    <div id="asdf">
     <ol>
         <li><a href=폰게임.html>폰게임</a></li>
         <li><a href=베이핑.html style="text-decoration:underline;">베이핑</a></li>
         <li><a href=조윤민.html>조윤민</a>/<a href="https://www.instagram.com/xyuxmxny/" target="_blank" title="인스타주소">인스타</a></li>
     </ol>
+    <div class="qwerty" style="padding-left : 20px;">
     <h2>전자담배</h2>
     전자담배에는 <strong>타르가 <u>0퍼센트</u>들어있다</strong>
     <br>그냥 수증기다
-    <br><img src="베이핑.jpeg" width="30%">
+    <br><img src="베이핑.jpeg" width="30%" style="display: inline;">
     <p>건강에 아무 문제가 없다</p>
+</div>
+</div>
 </body>
 </html>

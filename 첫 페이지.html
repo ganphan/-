@@ -13,7 +13,16 @@
   gtag('config', 'G-LKJ55CFN00');
 </script>
 <style>
-      a {
+     #asdf {
+        border: 5px none;
+        display:grid;
+        grid-template-columns: 160px 1fr;
+    }
+    .qwerty {
+        padding : 20px;
+        padding-top: 10px;
+    }
+    a {
         color:magenta;
     text-decoration: none;
     }
@@ -33,21 +42,38 @@
     body {
         margin : 0;
     }
-    
+    @media(max-width:800px){
+        #asdf{
+            display: block;
+        }
+        ol {
+            border-right : none;
+        }
+        .qwerty {
+            border-top :5px solid rgb(222, 113, 222);
+            padding: 0px;
+        } 
+    }
 </style>
 </head>
 
 <body>
     <h1><a href="첫 페이지.html" style="text-decoration:underline;">나의 취미생활</a></h1>
+    <div id="asdf">
+        <div>
     <ol>
         <li><a href=폰게임.html>폰게임</a></li>
         <li><a href=베이핑.html>베이핑</a></li>
         <li><a href=조윤민.html>조윤민</a>/<a href="https://www.instagram.com/xyuxmxny/" target="_blank" title="인스타주소">인스타</a></li>
+        </div>
+        <div class="qwerty">
     </ol>
-   나의 취미생활 3가지
+   <h3 style="margin : 0; font-size : 25px;">오늘의 할 일</h3>
    <br><input type="checkbox"> 출근
    <br><input type="checkbox"> 코딩공부
    <br><input type="checkbox"> 일퀘
+        </div>
+   </div>
    <br><div id="disqus_thread"></div>
    <script>
        /**
