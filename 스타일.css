@@ -27,8 +27,8 @@ body {background: url("배경.png")}
     background-color: rgba(41, 166, 238, 0.91);
     border-radius: 20px / 20px;
     border:5px solid rgb(83, 82, 82);
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 28px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif , cursive;
+    font-size: 100%;
     border-right: hidden;
 }
 #배너 {
@@ -47,8 +47,8 @@ a {
 li {
     border-style: outset;
     display: inline;
-    font-size: 30px;
-    font-family: 'Nanum Pen Script', cursive;
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif , cursive;
 }
 #본문 {
     border:5px groove gray;
