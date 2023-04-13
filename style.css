@@ -15,3 +15,7 @@ h1 {
 #login {
     text-align: center;
 }
+.gotologin {
+    text-decoration: none; 
+    color: gray;
+}
