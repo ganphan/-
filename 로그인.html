@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SunFlower</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>SunFlower</h1>
+        <br><div style="text-align: center";>who are you?</div>
+    <br><div id="login">
+     <input id ="이름" type="text">
+     <div style="text-align: center; margin-top: 20px;"><input id="버튼" type="button" value="입장"
+     ></div>
+    </div>
+    <script>
+        const 로그인 = document.getElementById("이름")
+        const 버튼 = document.getElementById("버튼")
+            버튼.addEventListener("click",function(){
+                const member = ["이석형","손성화","강현곤"];
+            if (member.includes(로그인.value)) {
+                alert("해위");
+            }
+            else {
+                alert("배위");
+            }
+        });
+    </script>
+    </body>
+</html>
