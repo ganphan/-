@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SunFlower</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>MeMo</h1>
+        <div style="text-align: right"><a href="index.html" class="gotologin">로그인 화면으로</a></div>
+            <p>
+                <span class="popup-trigger" data-img="강현곤.png" style="text-align: center; display: block;">BackBoss!! Click me!</span>
+            </p>
+          
+          <div class="popup">
+            <img class="popup-image" src="강현곤.png">
+            <button class="close-btn">Close</button>
+          </div>
+        <script>
+            const popupTrigger = document.querySelectorAll('.popup-trigger');
+            const popup = document.querySelector('.popup');
+            const popupImage = document.querySelector('.popup-image');
+            const closeBtn = document.querySelector('.close-btn');
+
+            popupTrigger.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const imgPath = trigger.dataset.img;
+                popupImage.setAttribute('src', imgPath);
+                popup.style.display = 'block';
+            });
+            });
+
+            closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+            });
+        </script>
+        <div id="board">
+            <form>
+                <label for="title">제목:</label>
+                <input type="text" id="title" name="title">
+                <br>
+                <label for="content">내용:</label>
+                <textarea id="content" name="content"></textarea>
+                <br>
+                <button type="submit">작성하기</button>
+            </form>
+        </div> 
+            <ul id="post-list">
+            </ul>
+          <script>
+                let posts = [];
+
+                // 게시글 추가 함수
+                function addPost(title, content) {
+                posts.push({ title, content });
+                }
+
+                // 게시글 목록을 보여주는 함수
+                function showPostList() {
+                const postList = document.getElementById('post-list');
+                postList.innerHTML = '';
+                posts.forEach((post) => {
+                    const li = document.createElement('li');
+                    const h2 = document.createElement('h2');
+                    const p = document.createElement('p');
+                    const 삭제 = document.createElement('button')
+                    삭제.textContent = '삭제';
+                    h2.textContent = post.title;
+                    삭제.classList.add('delete-button');
+                    p.textContent = post.content;
+                    li.appendChild(h2);
+                    li.appendChild(p);
+                    li.appendChild(삭제);
+                    postList.appendChild(li);
+                // 삭제버튼 관련
+                    const deleteButtons = document.querySelectorAll('.delete-button');
+                    deleteButtons.forEach((button) => {
+                    button.addEventListener('click', () => {
+                    const row = button.closest('li');
+                    const title = row.querySelector('h2').textContent;
+                    const content = row.querySelector('p').textContent;
+                    const index = posts.findIndex(post => post.title === title && post.content === content);
+                    if (index !== -1) {
+                    posts.splice(index, 1);
+                    showPostList();
+                    }
+                });
+                });
+                });
+                }
+
+                // 작성하기 버튼 클릭 이벤트 핸들러
+                const form = document.querySelector('form');
+                form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const title = document.getElementById('title').value;
+                const content = document.getElementById('content').value;
+                addPost(title, content);
+                showPostList();
+                form.reset();
+                });
+                
+                
+          </script>
+          <div id="강현곤">
+            <img src="강현곤2.png">
+            <a href="Album.html"><img src="강현곤.png"></a>
+            <a href="댓글.html"><img src="강현곤.png"></a>
+          </div>  
+    </body>
+</html>

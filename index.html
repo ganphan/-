@@ -1,11 +1,32 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title></title>
-</head>
-
-<frameset rows="0,*" frameborder="NO" border="0" framespacing="0" cols="*">
-  <frame name="topFrame" scrolling="NO" noresize src="bgm.html" >
-  <frame name="mainFrame" src="첫화면.html">
-</frameset>
-
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SunFlower</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>SunFlower</h1>
+        <br><div style="text-align: center";>who are you?</div>
+    <br><div id="login">
+     <input id ="이름" type="text">
+     <div style="text-align: center; margin-top: 20px;"><input id="버튼" type="button" value="입장"
+     ></div>
+    </div>
+    <script>
+        const 로그인 = document.getElementById("이름")
+        const 버튼 = document.getElementById("버튼")
+            버튼.addEventListener("click",function(){
+                var member = ["이석형","손성화","강현곤"];
+            if (member.includes(로그인.value)) {
+                location.href="homepage.html";
+                alert("해위");
+            }
+            else {
+                alert("접근금지");
+            }
+        });
+    </script>
+    <br><h4><a href=회원가입.html id="sign-up">회원가입</a></h4>
+    </body>
 </html>
