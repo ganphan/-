@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SunFlower</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -17,7 +17,7 @@
         const 로그인 = document.getElementById("이름")
         const 버튼 = document.getElementById("버튼")
             버튼.addEventListener("click",function(){
-                const member = ["이석형","손성화","강현곤"];
+                var member = ["이석형","손성화","강현곤"];
             if (member.includes(로그인.value)) {
                 location.href="homepage.html";
                 alert("해위");
@@ -27,5 +27,6 @@
             }
         });
     </script>
+    <br><h4><a href=회원가입.html id="sign-up">회원가입</a></h4>
     </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SunFlower</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <h1>Sign UP</h1>
+       <p>
+        이석형을 아십니까?<input type="checkbox" name="Question" id="Question">
+       </p>
+       <br>
+        Name<input type="text">
+        <input type="button" value="Sign" id="sign">
+       <script>
+        const 약관동의 = document.getElementById("Question")
+        const sign = document.getElementById("sign")
+            sign.addEventListener("click",function(){
+                if (약관동의.checked) {
+                    alert("홈페이지 점검 중");
+                }
+                else  {
+                    alert("돌아가");
+                }
+            })
+       </script>
+       <div style="text-align: right"><a href="index.html" class="gotologin">로그인 화면으로</a></div>
+    </body>
+</html>

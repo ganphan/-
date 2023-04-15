@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SunFlower</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>SunFlower</h1>
         <div style="text-align: right"><a href="index.html" class="gotologin">로그인 화면으로</a></div>
-        <video autoplay controls loop muted poster="aaa" preload="auto" style="width: 300;">
-            <source src="movie.mp4" type="video/mp4">
-            외않되
-          </video>
-        
+            <p>
+                BackBoss!! <span class="popup-trigger" data-img="강현곤.png">Click me!</span>
+            </p>
+          
+          <div class="popup">
+            <img class="popup-image" src="강현곤.png">
+            <button class="close-btn">Close</button>
+          </div>
+        <script>
+            const popupTrigger = document.querySelectorAll('.popup-trigger');
+            const popup = document.querySelector('.popup');
+            const popupImage = document.querySelector('.popup-image');
+            const closeBtn = document.querySelector('.close-btn');
+
+            popupTrigger.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const imgPath = trigger.dataset.img;
+                popupImage.setAttribute('src', imgPath);
+                popup.style.display = 'block';
+            });
+            });
+
+            closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+            });
+        </script>  
     </body>
 </html>
