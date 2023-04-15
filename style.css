@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Square&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans+KR&display=swap');
 body {
     background: linear-gradient(to bottom right, #FFA07A, #FF69B4);
     background-size: 100% 100%;
     background-attachment: fixed;
     max-width: 768px;
+    font-family: 'Nanum Square', sans-serif;
+    font-weight: bold;
 }
 h1 {
     text-align: center;
@@ -51,4 +55,15 @@ h1 {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+#board {
+    text-align: center;   
+}
+#post-list {
+    border: 5px solid rgb(255, 255, 255);
+    border-color: transparent;
+    background-image: linear-gradient(to bottom right, transparent, aliceblue);
+    text-decoration: none;
+    list-style-type: "\1F44D";
+    font-family: "Nanum Gothic", sans-serif;
 }

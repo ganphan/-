@@ -9,7 +9,7 @@
         <h1>SunFlower</h1>
         <div style="text-align: right"><a href="index.html" class="gotologin">로그인 화면으로</a></div>
             <p>
-                BackBoss!! <span class="popup-trigger" data-img="강현곤.png">Click me!</span>
+                <span class="popup-trigger" data-img="강현곤.png" style="text-align: center; display: block;">BackBoss!! Click me!</span>
             </p>
           
           <div class="popup">
@@ -33,6 +33,74 @@
             closeBtn.addEventListener('click', () => {
             popup.style.display = 'none';
             });
-        </script>  
+        </script>
+        <div id="board">
+            <form>
+                <label for="title">제목:</label>
+                <input type="text" id="title" name="title">
+                <br>
+                <label for="content">내용:</label>
+                <textarea id="content" name="content"></textarea>
+                <br>
+                <button type="submit">작성하기</button>
+            </form>
+        </div> 
+            <ul id="post-list">
+            </ul>
+          <script>
+                let posts = [];
+
+                // 게시글 추가 함수
+                function addPost(title, content) {
+                posts.push({ title, content });
+                }
+
+                // 게시글 목록을 보여주는 함수
+                function showPostList() {
+                const postList = document.getElementById('post-list');
+                postList.innerHTML = '';
+                posts.forEach((post) => {
+                    const li = document.createElement('li');
+                    const h2 = document.createElement('h2');
+                    const p = document.createElement('p');
+                    const 삭제 = document.createElement('button')
+                    삭제.textContent = '삭제';
+                    h2.textContent = post.title;
+                    삭제.classList.add('delete-button');
+                    p.textContent = post.content;
+                    li.appendChild(h2);
+                    li.appendChild(p);
+                    li.appendChild(삭제);
+                    postList.appendChild(li);
+                // 삭제버튼 관련
+                    const deleteButtons = document.querySelectorAll('.delete-button');
+                    deleteButtons.forEach((button) => {
+                    button.addEventListener('click', () => {
+                    const row = button.closest('li');
+                    const title = row.querySelector('h2').textContent;
+                    const content = row.querySelector('p').textContent;
+                    const index = posts.findIndex(post => post.title === title && post.content === content);
+                    if (index !== -1) {
+                    posts.splice(index, 1);
+                    showPostList();
+                    }
+                });
+                });
+                });
+                }
+
+                // 작성하기 버튼 클릭 이벤트 핸들러
+                const form = document.querySelector('form');
+                form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const title = document.getElementById('title').value;
+                const content = document.getElementById('content').value;
+                addPost(title, content);
+                showPostList();
+                form.reset();
+                });
+                
+                
+          </script> 
     </body>
 </html>
