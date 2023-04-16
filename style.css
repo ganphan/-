@@ -7,6 +7,7 @@ body {
     max-width: 768px;
     font-family: 'Nanum Square', sans-serif;
     font-weight: bold;
+    max-height: 650px;
 }
 h1 {
     text-align: center;
@@ -72,9 +73,45 @@ h1 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    text-align: end;
+    position: fixed;
+    bottom: 0;
+    left: 0;
   }
   #강현곤 img {
     width: calc(33.33% - 10px);
     margin: 0 5px;
     width: 100px;
+  }
+  #이름 {
+    display: inline-block;
+  padding: 10px;
+  background-color: #FEE12B;
+  border: 2px solid #FFC107;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #f09a31;
+  position: relative;
+  }
+  #이름 input[type="text"] {
+    border: none;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+  }
+  #이름 input[type="text"]:focus {
+    outline: none;
+    border-bottom: 1px solid #FFC107;
+  }
+  #버튼, #작성하기 {
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+  }
+  #배경 {
+    background-color: aliceblue;
   }
