@@ -67,3 +67,14 @@ h1 {
     list-style-type: "\1F44D";
     font-family: "Nanum Gothic", sans-serif;
 }
+#강현곤 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  #강현곤 img {
+    width: calc(33.33% - 10px);
+    margin: 0 5px;
+    width: 100px;
+  }
